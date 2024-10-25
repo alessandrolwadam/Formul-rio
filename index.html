@@ -1,79 +1,76 @@
-< cabeça >
-< title > Cadastro </ title >
-</ cabeça >
-< corpo >
-< div >
-< h1 id =" titulo " > Cadastro de DEVs </ h1 >
-< p id =" subtitulo " > Complete suas informações </ p >
-</div>
-< formulário >
-< fieldset class =" grupo " >
-< div class =" campo " >
-< label for =" nome " > < strong > Nome </ strong > </ label >
-< input type =" text " name =" nome " id =" nome " obrigatório > </ input >
-</div>
-< div class =" campo " >
-< label for =" sobrenome " > < strong > Sobrenome </ strong > </ label >
-< input type =" text " name =" sobrenome " id =" sobrenome " obrigatório >
-</div>
-</ fieldset >
-< br >
-< div class =" campo " >
-< label for =" email " > < strong > Email </ strong > </ label >
-< tipo de entrada =" e-mail " nome =" e-mail " id =" e-mail " obrigatório >
-</div>
-< br >
-< div class =" campo " >
-< label > < strong > De qual lado da aplicação você desenvolve? </ forte > </ rótulo >
-< rótulo >
-< input type =" radio " nome =" devweb " value =" frontend " verificado > Front-end
-</ entrada >
-</ rótulo >
-< rótulo >
-< tipo de entrada = " rádio " nome = " devweb " valor = " backend " > Back-end
-</ entrada >
-</ rótulo >
-< rótulo >
-< tipo de entrada =" rádio " nome =" devweb " valor =" fullstack " > Fullstack
-</ entrada >
-</ rótulo >
-</div>
-< br >
-< div class =" campo " >
-< label for =" senioridade " > < strong > Senioridade </ strong > </ label >
-< select id =" antiguidade " >
-< opção selecionada desabilitar valor ="" > Selecione </ opção >
-< option > Júnior </ option >
-
-< opção > Pleno </ opção >
-< option > Sênior </ option > </ select >
-</div>
-< fieldset class =" grupo " >
-< div class =" campo " >
-< label > < strong > Selecione as tecnologias que utiliza: </ strong > </ label > < br >
-< br >
-< tipo de entrada =" caixa de seleção " id =" tecnologia1 " valor =" HTML " >
-< rótulo tipo =" tecnologia1 " > HTML </ rótulo >
-< tipo de entrada =" caixa de seleção " id =" tecnologia2 " valor =" CSS " >
-< rótulo tipo =" tecnologia2 " > CSS </ rótulo >
-< tipo de entrada =" caixa de seleção " id =" tecnologia3 " valor =" javascript " >
-< label type =" tecnologia3 " > Javascript </ label >
-< tipo de entrada =" caixa de seleção " id =" tecnologia4 " valor =" PHP " >
-< rótulo tipo =" tecnologia4 " > PHP </ rótulo >
-< tipo de entrada =" caixa de seleção " id =" tecnologia5 " valor =" C# " >
-< label type =" tecnologia5 " > C# </ label >
-< tipo de entrada =" caixa de seleção " id =" tecnologia6 " valor =" python " >
-< label type =" tecnologia6 " > Python </ label >
-< tipo de entrada =" caixa de seleção " id =" tecnologia7 " valor =" java " >
-< label type =" tecnologia7 " > Java </ label >
-</div>
-</ fieldset >
-< div class =" campo " >
-< br >
-< label > < strong > Conte um pouco da sua experiência: </ strong > </ label >
-< textarea row =" 6 " style =" width: 26em " id =" experiencia " nome =" experiencia " >
-</ textarea >
-</div>
-< button class =" botao " type =" submit " > Concluir </ button >
-</ formulário >
-</ corpo >
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container_form">
+        <h1>Formulário de Cadastro</h1>
+        <form class="form" action="#" method="post">
+            <div class="form_grupo">
+                <label for="nome" class="form_label">Nome</label>
+                <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+            </div>
+            <div class="form_grupo">
+                <label for="email" class="form_label">Email</label>
+                <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
+            </div>
+            <div class="form_grupo">
+                <label for="datanascimento" class="form_label">Data de Nascimento</label>
+                <input type="date" name="datanascimento" class="form_input" id="datanascimento" required>
+            </div>
+            <div class="form_grupo">
+                <label for="estadocivil" class="text">Estado Civil</label>
+                <select name="estadocivil" class="dropdown" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="Solteiro">Solteiro(a)</option>
+                    <option value="Casado">Casado(a)</option>
+                    <option value="Divorciado">Divorciado(a)</option>
+                    <option value="Viúvo">Viúvo(a)</option>
+                </select>
+            </div>
+            <div class="form_grupo">
+                <span class="legenda">Sexo:</span>
+                <div class="radio-btn">
+                    <input type="radio" class="form_new_input" id="masculino" name="sexo" value="Masculino" required>
+                    <label for="masculino" class="radio_label form_label">Masculino</label>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" class="form_new_input" id="feminino" name="sexo" value="Feminino" required>
+                    <label for="feminino" class="radio_label form_label">Feminino</label>
+                </div>
+            </div>
+            <div class="form_grupo">
+                <span class="legenda">Você quer aprender o que?</span>
+                <div class="check-btn">
+                    <input type="checkbox" class="form_new_input" id="html5" name="aprender" value="html5">
+                    <label for="html5" class="form_label check_label">HTML5</label>
+                </div>
+                <div class="check-btn">
+                    <input type="checkbox" class="form_new_input" id="css3" name="aprender" value="css3">
+                    <label for="css3" class="form_label check_label">CSS3</label>
+                </div>
+                <div class="check-btn">
+                    <input type="checkbox" class="form_new_input" id="jquery" name="aprender" value="jquery">
+                    <label for="jquery" class="form_label check_label">jQuery</label>
+                </div>
+                <div class="check-btn">
+                    <input type="checkbox" class="form_new_input" id="wordpress" name="aprender" value="wordpress">
+                    <label for="wordpress" class="form_label check_label">WordPress</label>
+                </div>
+            </div>
+            <div class="form_message">
+                <label for="message" class="form_message_label">Digite aqui sua mensagem:</label>
+                <textarea name="mensagem" id="message" cols="30" rows="3" class="form_input message_input" required></textarea>
+            </div>
+            <div class="submit">
+                <input type="hidden" name="acao" value="enviar">
+                <button type="submit" name="Submit" class="submit_btn">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
