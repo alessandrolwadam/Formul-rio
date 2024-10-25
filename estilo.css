@@ -1,126 +1,167 @@
-/* Todos os elementos da página */
-* {
-    margem : 0 ;
-    preenchimento : 0 ;
-    }
-    
-    /* Elementos com o ID "título" */
-    # título {
-    família de fontes : sans-serif;
-    cor : # 000000 ;
-    margem esquerda : 7 % ;
-    }
-    
-    /* Elementos com o ID "subtítulo" */
-    # legenda {
-    família de fontes : sans-serif;
-    cor : # FF69B4 ;
-    margem esquerda : 10 % ;
-    }
-    
-    # verificar {
-    exibição : bloco embutido;
-    }
-    
-    /* Elementos da tag <fieldset>*/
-    conjunto de campos {
-    borda : 0 ;
-    }
-    
-    /* Elemento de tag <body> */
-    corpo {
-    cor de fundo : # F0F8FF ;
-    família de fontes : sans-serif;
-    tamanho da fonte : 1 em ;
-    cor : # 59429d ;
-    margem esquerda : 36 % ;
-    margem superior : 2 % ;
-    justificar-conteúdo : centro;
-    }
-    
-    /* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
-    entrada , selecionar , textarea , botão {
-    família de fontes : sans-serif;
-    tamanho da fonte : 1 em ;
-    cor : # 000000 ;
-    raio da borda : 5 px ;
-    }
-    
-    /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
-    . grupo : antes , . grupo : depois {
-    exibição : tabela;
-    }
-    
-    /* Elementos de classe "grupo" no estado da pseudoclasse "after" */
-    . grupo : depois {
-    claro : ambos;
-    }
-    
-    /* Elementos de classe "campo" */
-    . campo {
-    margem-inferior : 1 em ;
-    }
-    
-    /* Elementos de classe "campo" da tag <label> */
-    . rótulo do campo {
-    margem inferior : 0,2 em ;
-    cor : # 000000 ;
-    exibir : bloco;
-    }
-    
-    /* Elementos de classe "campo" ou "grupo" da tag <fieldset> */
-    fieldset . grupo . campo {
-    flutuar : esquerda;
-    margem-direita : 1 em ;
-    }
-    
-    /* Elementos de classe "campo" das tags <input> com atributo text e email, da tag
-    <select> e da tag <textarea>*/
-    . campo input [ tipo = "texto" ] , . campo input [ tipo = "email" ] , . campo select , .
-    campo textarea {
-    preenchimento : 0,2 em ;
-    borda : 1 px sólido # 59429d ;
-    caixa - sombra : 2 px 2 px 2 px rgba ( 0 , 0 , 0.2 );
-    exibir : bloco;
-    }
-    
-    /* Elementos de classe "campo" da tag <select> e <option>*/
-    . campo selecione a opção {
-    preenchimento-direito : 1 em ;
-    }
-    
-    /* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com
-    estado da pseudoclasse "focus"*/
-    . campo input : foco , . campo select : foco , . campo textarea : foco {
-    fundo : # E0E0F8 ;
-    }
-    
-    /* Elemento de classe "botão" */
-    . botao {
-    tamanho da fonte : 1,2 em ;
-    fundo : # 000000 ;
-    borda : 0 ;
-    
-    margem-inferior : 1 em ;
-    cor : # ffffff ;
-    preenchimento : 0,2 em 0,6 em ;
-    caixa - sombra : 2 px 2 px 2 px rgba ( 0 , 0 , 0.2 );
-    sombra de texto : 1 px 1 px 1 px rgba ( 0 , 0 , 0 , 0.5 );
-    posição : absoluta;
-    topo : 90 % ;
-    esquerda : 50 % ;
-    margem direita : -50 % ;
-    transformar : traduzir ( -50 % , -50 % )
-    }
-    
-    /* Elemento de classe "botão" com o estado da pseudoclasse "hover" */
-    . botao : hover {
-    fundo : # CCBBFF ;
-    caixa-sombra : inserção 2 px 2 px 2 px rgba ( 0 , 0 , 0 , 0.2 );
-    text-shadow : nenhum;
-    }
-    
-    /* Elementos de classe botão e tag <select> */
-    . botao , selecione {
-    cursor : ponteiro;
-    }
+.container_form {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+.container_form h1 {
+    font-family: 'open_sansregular';
+    font-size: 2.3em;
+    color: #00dae0;
+    border-bottom: 1px #f0eded solid;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.form_grupo {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form_grupo .legenda {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.submit {
+    width: 100%;
+    float: left;
+}
+
+.submit_btn {
+    float: left;
+    display: block;
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: #6fcffb;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-family: inherit;
+    font-size: 25px;
+    border-radius: 6px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit_btn:hover {
+    background-color: #444444;
+    transform: scale(1.03);
+}
+
+.dropdown {
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: inherit;
+    color: #222222;
+    border-radius: 4px;
+    border: 1px #f2f2f2 solid;
+    background: #fdfdfd;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.form_new_input {
+    display: none;
+}
+
+.radio_label,
+.check_label {
+    float: left;
+    width: 100%;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.radio_new_btn {
+    position: absolute;
+    left: 0;
+    transform: translateY(3px);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 0.2em solid #4c4c4c;
+}
+
+.radio_new_btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #6fcffb;
+    visibility: hidden;
+}
+
+.check_new_btn {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 0.2em solid #4c4c4c;
+}
+
+.check_new_btn::after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6fcffb;
+    visibility: hidden;
+}
+
+.form_new_input:checked ~ .radio_label .radio_new_btn::after,
+.form_new_input:checked ~ .check_label .check_new_btn::after {
+    visibility: visible;
+}
+
+.form_new_input:checked ~ .radio_label,
+.form_new_input:checked ~ .check_label {
+    color: #6fcffb;
+}
+
+.form_input {
+    font-size: 16px;
+    font-family: inherit;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px #f2f2f2 solid;
+    background: #fdfdfd;
+    outline: none;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.form_message,
+.form_message .message_input {
+    width: 100%;
+    float: left;
+}
+
+.form_message_label {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
