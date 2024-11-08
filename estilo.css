@@ -1,103 +1,117 @@
-/* Todos os elementos da página */
+/* Resetando margens e preenchimento */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Elementos com o ID "titulo" */
-#titulo {
-    font-family: sans-serif;
-    color: #000000;
-    margin-left: 7%;
-}
-
-/* Elementos com o ID "subtitulo" */
-#subtitulo {
-    font-family: sans-serif;
-    color: #FF69B4;
-    margin-left: 10%;
-}
-
-/* Elementos da tag <fieldset> */
-fieldset {
-    border: 0;
-}
-
-/* Elemento de tag <body> */
+/* Definindo o estilo para o body */
 body {
+    font-family: Arial, sans-serif;
     background-color: #F0F8FF;
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #59429d;
-    margin-left: 36%;
-    margin-top: 2%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Elementos de tags <input>, <select>, <textarea> e <button> */
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #000000;
-    border-radius: 5px;
+/* Container centralizado */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Elementos de classe "grupo" */
-.grupo::before, .grupo::after {
-    display: table;
+/* Estilo para o título */
+#titulo {
+    font-size: 2em;
+    text-align: center;
+    color: #000;
 }
 
-.grupo::after {
-    clear: both;
-}
-
-/* Elementos de classe "campo" */
-.campo {
-    margin-bottom: 1em;
-}
-
-/* Elementos de classe "campo" da tag <label> */
-.campo label {
-    margin-bottom: 0.2em;
-    color: #000000;
-    display: block;
-}
-
-/* Elementos de classe "campo" */
-.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
-    padding: 0.2em;
-    border: 1px solid #00d11c;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    display: block;
-}
-
-/* Elemento de classe "campo" com tag <input>, <select> e <textarea> com estado da pseudoclasse "focus" */
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: #E0E0F8;
-}
-
-/* Elemento de classe "botao" */
-.botao {
+/* Estilo para o subtítulo */
+#subtitulo {
+    text-align: center;
+    color: #FF69B4;
     font-size: 1.2em;
-    background: #000000;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 2em;
 }
 
-/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
-.botao:hover {
-    background: #CCBBFF;
-    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
-    text-shadow: none;
+/* Estilo do campo do formulário */
+.campo {
+    margin-bottom: 1.5em;
 }
 
-/* Elementos de classe botão e tag <select> */
-.botao, select {
+.campo label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito no foco de inputs */
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    border-color: #FF69B4;
+    background-color: #f8f8f8;
+}
+
+/* Estilo para o botão */
+.botao {
+    width: 100%;
+    padding: 0.8em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1.5em;
+}
+
+.botao:hover {
+    background-color: #CCBBFF;
+    transform: scale(1.05);
+}
+
+.botao:active {
+    background-color: #AA88FF;
+}
+
+/* Estilo para o campo de tecnologias */
+.grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.grupo label {
+    flex: 1 1 45%;
+    margin-bottom: 0.5em;
+}
+
+/* Estilo do campo de experiência */
+textarea {
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #333;
+    background-color: #f8f8f8;
 }
