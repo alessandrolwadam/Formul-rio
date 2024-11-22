@@ -72,7 +72,7 @@ input, select, textarea, button {
 
 /* Elemento de classe "campo" com tag <input>, <select> e <textarea> com estado da pseudoclasse "focus" */
 .campo input:focus, .campo select:focus, .campo textarea:focus {
-    background-color: #f77214;
+    background-color: #ff4424;
 }
 
 /* Elemento de classe "botao" */
